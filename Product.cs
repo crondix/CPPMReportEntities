@@ -13,7 +13,7 @@ namespace CPPMReportEntities.DomainObjects
         public Guid Id { get; set; }
         public ProductType ProductType { get; set; }
         public ProductSubType? ProductSubType { get; set; }
-        public double ProducedQuantity { get; set; }
+        public double ProducedQuantity { get; set; } = 0;
         public IMeasureUnit ProducedQuantityUnits { get; set; }
     }
 }

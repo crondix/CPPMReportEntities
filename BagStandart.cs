@@ -8,6 +8,9 @@ using CPPMReportEntities.Interface;
 
 namespace CPPMReportEntities.DomainObjects
 {
+    /// <summary>
+    /// Справочник по стандартам мешков 
+    /// </summary>
     class BagStandart
     {
         public Guid Id { get; set; }

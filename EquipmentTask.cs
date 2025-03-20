@@ -12,8 +12,11 @@ namespace CPPMReportEntities
     class EquipmentTask
     {
         public Guid Id { get; set; }
-        public double PurposeProduct { get; set; }
-        public double FactProduct { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public Product PurposeProduct { get; set; }
+        public Product FactProduct { get; set; }
         public IMeasureUnit ProductUnits { get; set; }
+        public EquipmentDowntimeReason? DowntimeReason { get; set; }
     }
 }
