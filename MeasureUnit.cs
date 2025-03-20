@@ -1,6 +1,8 @@
-﻿namespace CPPMReportEntities
+﻿using CPPMReportEntities.Interface;
+
+namespace CPPMReportEntities
 {
-    public class MeasureUnit
+    public class MeasureUnit: IMeasureUnit
     {
         public Guid Id { get; set; }
         public string Name { get; set; }

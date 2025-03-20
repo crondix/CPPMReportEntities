@@ -4,14 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CPPMReportEntities
+namespace CPPMReportEntities.DomainObjects
 {
-    public class bag
+    class WorkShift
     {
         public Guid Id { get; set; }
-        public FabricType type { get; set; }
-        public double Weight { get; set; }
-        
+        public string Name { get; set; }
+        public ICollection<WorkShift>? WorkShiftsTask { get; set; }
 
     }
 }

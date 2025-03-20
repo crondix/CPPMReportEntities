@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace CPPMReportEntities
 {
-    public class PolypropyleneTextile
+    class DowntimeReason
     {
-
     }
 }
