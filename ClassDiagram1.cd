@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CPPMReportEntities.DomainObjects.СтандартМешка">
+    <Position X="21.5" Y="3.25" Width="3.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="ЕдиницыИзмеренияШирины" Type="CPPMReportEntities.ЕдиницаИзмерения">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.65" Y="0.753" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="ЕдиницыИзмеренияДлины" Type="CPPMReportEntities.ЕдиницаИзмерения" FixedToPoint="true">
+      <Path>
+        <Point X="24.5" Y="6.348" />
+        <Point X="24.5" Y="10" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.832" Y="0.368" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="ЕдиницыИзмеренияВеса" Type="CPPMReportEntities.ЕдиницаИзмерения" FixedToPoint="true">
+      <Path>
+        <Point X="21.5" Y="6.348" />
+        <Point X="21.5" Y="10" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.006" Y="0.257" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AEAAAAABAEBACABAAAAAAwAAAAMAQAABAAEAIQAJACQ=</HashCode>
+      <FileName>СтандартМешка.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ЕдиницыИзмеренияШирины" />
+      <Property Name="ЕдиницыИзмеренияДлины" />
+      <Property Name="ЕдиницыИзмеренияВеса" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="CPPMReportEntities.DomainObjects.Изделие">
+    <Position X="15.25" Y="10" Width="2.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAABIAAAAAAAABEAAAAAAAAAAAAAAIEAAAAQ=</HashCode>
+      <FileName>Изделие.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ТипИзделия" />
+      <Property Name="ЕдиницыИзмеренияВыпущенногоКоличество" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="CPPMReportEntities.DomainObjects.ПодтипИзделия">
+    <Position X="19.5" Y="15.25" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEBAAABAAAAAAAAAAAEAAAAAAAEAIAAAACQ=</HashCode>
+      <FileName>ПодтипИзделия.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CPPMReportEntities.DomainObjects.ТипИзделия">
+    <Position X="15.75" Y="15.25" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="Подтипы" Type="CPPMReportEntities.DomainObjects.ПодтипИзделия" ManuallyRouted="true">
+      <Path>
+        <Point X="18" Y="16.51" />
+        <Point X="19.5" Y="16.51" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAEBAAABAAAAAAAAAAAEAAAAAAAEAIAAAACQ=</HashCode>
+      <FileName>ТипИзделия.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Подтипы" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="CPPMReportEntities.DomainObjects.РабочаяСмена">
+    <Position X="16.75" Y="7.25" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEBAAgBAAAAAAAAAAAEAAAAAAAEAAAAAAAQ=</HashCode>
+      <FileName>РабочаяСмена.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="ЗадачиСмены" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="CPPMReportEntities.DomainObjects.ЗадачаСмены">
+    <Position X="13.75" Y="5.25" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="ФактическоеИзделие" Type="CPPMReportEntities.DomainObjects.Изделие" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="14.833" Y="7.578" />
+        <Point X="14.833" Y="10.25" />
+        <Point X="15.25" Y="10.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.525" Y="0.368" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="ЦелевоеИзделие" Type="CPPMReportEntities.DomainObjects.Изделие" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="14.25" Y="7.578" />
+        <Point X="14.25" Y="10.562" />
+        <Point X="15.25" Y="10.562" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="1.155" Y="0.073" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AIAAACCAAABAAAAAAAAAACAAAAAAAAAAAIAIAACACAQ=</HashCode>
+      <FileName>ЗадачаСмены.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ФактическоеИзделие" />
+      <Property Name="ЦелевоеИзделие" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="CPPMReportEntities.Оборудование">
+    <Position X="11.5" Y="6" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEBQAABAAAAAAAAAAAEAAAAAAAEAIAAAACQ=</HashCode>
+      <FileName>Оборудование.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Задачи" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="CPPMReportEntities.ПричинаПростояОборудования">
+    <Position X="8" Y="10.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAABAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>ПричинаПростояОборудования.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CPPMReportEntities.ЗадачаОборудования">
+    <Position X="7.75" Y="1.75" Width="4.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="ФактическоеИзделие" Type="CPPMReportEntities.DomainObjects.Изделие" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="10.406" Y="4.271" />
+        <Point X="10.406" Y="11.438" />
+        <Point X="15.25" Y="11.438" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="ЦелевоеИзделие" Type="CPPMReportEntities.DomainObjects.Изделие" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="10.953" Y="4.271" />
+        <Point X="10.953" Y="11.125" />
+        <Point X="15.25" Y="11.125" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AIAAACCAAABAAAAAAAAAACAAAABAACAAAIAoAACACAQ=</HashCode>
+      <FileName>ЗадачаОборудования.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ФактическоеИзделие" />
+      <Property Name="ЦелевоеИзделие" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Простои" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="ПростойОборудования">
+    <Position X="7.75" Y="6.75" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="ПричинаПростоя" Type="CPPMReportEntities.ПричинаПростояОборудования">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.056" Y="0.368" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AIAAACCAABBAAAAQAAAAACAAgAAAAIAAAAAAAAAAAAQ=</HashCode>
+      <FileName>ПростойОборудования.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ПричинаПростоя" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="CPPMReportEntities.ЕдиницаИзмерения">
+    <Position X="21.5" Y="10" Width="3" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEBAAABAAAAAAAAAAAEAAAAAAAEAIAAAACQ=</HashCode>
+      <FileName>ЕдиницаИзмерения.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
